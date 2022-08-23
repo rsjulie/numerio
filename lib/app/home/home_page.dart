@@ -20,8 +20,13 @@ class HomePage extends GetView<HomeController> {
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
-                const SliverAppBar(
-                  title: Icon(Icons.home),
+                SliverAppBar(
+                  title: IconButton(
+                    icon: const Icon(Icons.home),
+                    onPressed: () {
+                      Get.offNamed('form');
+                    },
+                  ),
                   backgroundColor: Colors.transparent,
                 )
               ];
@@ -31,11 +36,20 @@ class HomePage extends GetView<HomeController> {
               child: ListView(
                 children: const [
                   SizedBox(height: 10),
-                  HomeCard(title: 'NUMEROLOGIA CABALÍSTICA'),
+                  HomeCard(
+                    title: 'NUMEROLOGIA CABALÍSTICA',
+                    imageUrl: 'assets/images/numerologia_cabalistica_icon.png',
+                  ),
                   SizedBox(height: 25),
-                  HomeCard(title: 'PIRÂMIDE'),
+                  HomeCard(
+                    title: 'PIRÂMIDE INVERTIDA',
+                    imageUrl: 'assets/images/piramide_icon.png',
+                  ),
                   SizedBox(height: 25),
-                  HomeCard(title: 'ARCANOS'),
+                  HomeCard(
+                    title: 'ARCANOS',
+                    imageUrl: 'assets/images/arcanos_icon.png',
+                  ),
                 ],
               ),
             ),
