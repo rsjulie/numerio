@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:numerio/app/home/widgets/home_card.dart';
+import 'package:numerio/app/pages/home/widgets/home_card.dart';
 import './home_controller.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -39,16 +39,19 @@ class HomePage extends GetView<HomeController> {
                   HomeCard(
                     title: 'NUMEROLOGIA CABALÍSTICA',
                     imageUrl: 'assets/images/numerologia_cabalistica_icon.png',
+                    url: '/numerologia_cabalistica',
                   ),
                   SizedBox(height: 25),
                   HomeCard(
                     title: 'PIRÂMIDE INVERTIDA',
                     imageUrl: 'assets/images/piramide_icon.png',
+                    url: '/piramide_invertida',
                   ),
                   SizedBox(height: 25),
                   HomeCard(
                     title: 'ARCANOS',
                     imageUrl: 'assets/images/arcanos_icon.png',
+                    url: '/arcanos',
                   ),
                 ],
               ),

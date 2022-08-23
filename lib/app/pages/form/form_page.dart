@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:numerio/app/form/form_controller.dart';
+import 'package:numerio/app/pages/form/form_controller.dart';
 
 class FormPage extends GetView<FormController> {
   final Color violet = const Color.fromARGB(255, 78, 116, 255);
