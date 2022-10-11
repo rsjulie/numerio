@@ -24,7 +24,7 @@ class AppRouters {
       binding: FormBindings(),
       page: () => FormPage(),
       transition: Transition.fade,
-      transitionDuration: const Duration(seconds: 2),
+      transitionDuration: const Duration(seconds: 1),
     ),
     GetPage(
       name: '/home',
