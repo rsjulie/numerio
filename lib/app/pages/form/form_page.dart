@@ -148,7 +148,30 @@ class FormPage extends GetView<FormController> {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 InkWell(
-                  onTap: () {
+                  onTap: () async {
+                    Get.dialog(SizedBox(
+                      child: Column(
+                        children: [
+                          Flexible(
+                              child: Container(
+                            color: Colors.black.withOpacity(0.75),
+                          )),
+                          Opacity(
+                            opacity: 0.75,
+                            child: Image.asset(
+                              'assets/images/loading.gif',
+                            ),
+                          ),
+                          Flexible(
+                              child: Container(
+                            color: Colors.black.withOpacity(0.75),
+                          )),
+                        ],
+                      ),
+                    ));
+                    await Future.delayed(const Duration(seconds: 3));
+                    Get.back();
+                    await Future.delayed(const Duration(milliseconds: 300));
                     Get.offNamed('/home');
                   },
                   child: Container(
